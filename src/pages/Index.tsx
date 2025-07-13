@@ -1,8 +1,8 @@
-
 import { useState, useEffect, useRef } from 'react';
-import { Send, Users, MessageCircle, Heart, X, UserPlus } from 'lucide-react';
+import { Send, Users, Heart, X, UserPlus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import Logo from '@/components/Logo';
 
 interface Message {
   id: string;
@@ -139,11 +139,8 @@ const Index = () => {
         <header className="bg-white border-b border-gray-200 p-4 shadow-sm">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <MessageCircle className="w-6 h-6 text-blue-600" />
-              </div>
+              <Logo size="sm" />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Random Chat</h1>
                 <p className="text-gray-600 text-sm">
                   {isMatched ? `Chatting with ${partnerName}` : 'Connect with random people'}
                 </p>
